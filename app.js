@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 app.use(cors({
-  origin: ['https://eshop.vercel.app','http://localhost:3000'],
+  origin: ['https://vizoeshop.vercel.app','http://localhost:3000'],
   credentials: true
 }));
 

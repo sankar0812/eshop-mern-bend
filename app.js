@@ -5,9 +5,16 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
+// app.use(cors({
+//   origin: ['https://vizoeshop.vercel.app','http://localhost:3000'],
+//   credentials: true
+// }));
+
 app.use(cors({
-  origin: ['https://vizoeshop.vercel.app','http://localhost:3000'],
-  credentials: true
+  origin: ['https://vizoeshop.vercel.app', 'http://localhost:3000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
 }));
 
 app.use(express.json());
